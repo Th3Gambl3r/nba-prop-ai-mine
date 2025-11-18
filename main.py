@@ -23,7 +23,7 @@ st.caption(f"Updated: {datetime.now().strftime('%Y-%m-%d %I:%M %p')}")
 
 # Simple email setup (user configures)
 if 'email_sent' not in st.session_state:
-    st.session_state.email_sent = False
+    st.session_state.email_sent = False
 
 # Load data & models (auto-trains if missing)
 @st.cache_data
