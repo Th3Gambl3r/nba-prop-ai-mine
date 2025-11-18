@@ -1,4 +1,11 @@
 import streamlit as st
+if 'password' not in st.session_state:
+    password = st.text_input("Enter Password", type="password")
+    if password == "nbaedge9927":
+        st.session_state.password = True
+        st.rerun()
+    else:
+        st.stop()
 import pandas as pd
 import joblib
 import numpy as np
