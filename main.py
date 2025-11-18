@@ -21,10 +21,6 @@ st.set_page_config(page_title="NBA Prop AI", layout="wide")
 st.title("NBA Prop Bet AI Dashboard")
 st.caption(f"Updated: {datetime.now().strftime('%Y-%m-%d %I:%M %p')}")
 
-# Simple email setup (user configures)
-if 'email_sent' not in st.session_state:
-    st.session_state.email_sent = False
-
 # Load data & models (auto-trains if missing)
 @st.cache_data
 def load_models():
