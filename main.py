@@ -1,21 +1,19 @@
 import streamlit as st
-if 'password' not in st.session_state:
-    password = st.text_input("Enter Password", type="password")
-    if password == "nbaedge9927":
-        st.session_state.password = True
-        st.rerun()
-    else:
-        st.stop()
 import pandas as pd
-import joblib
 import numpy as np
-from nba_api.stats.static import players
 from datetime import datetime
 import plotly.graph_objects as go
-import smtplib
-from email.mime.text import MimeText
-from email.mime.multipart import MimeMultipart
-import os
+
+# Simple password
+pw = st.text_input("Password", type="password")
+if pw != "nbaedge9927":
+    st.stop()
+
+st.set_page_config(page_title="Th3Gambl3r NBA Props", layout="wide")
+st.title("NBA Prop AI Dashboard")
+st.caption(f"Updated {datetime.now():%b %d, %Y – %I:%M %p}")
+
+st.success("You’re in! Dashboard loading…
 
 st.set_page_config(page_title="NBA Prop AI", layout="wide")
 st.title("NBA Prop Bet AI Dashboard")
